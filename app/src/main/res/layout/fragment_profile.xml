@@ -1,0 +1,313 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textColor="#eeaaee"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+         <!-- 整个LinearLayout是账号和请输入账号的矩形框架 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            android:background="@color/white">
+
+            <!-- 帐号的布局 -->
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <!-- EditText表示的是请输入帐号的一个布局 -->
+            <EditText
+                android:id="@+id/user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/tv_name"
+                android:padding="5.0dip"
+                android:paddingRight="40dp"
+                android:textColor="#ff3b3b3b"
+                android:textSize="16.0sp"/>
+        </LinearLayout>
+
+        <!-- 密码和请输入密码的整个布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            android:background="@color/white">
+
+            <!-- 密码的布局 -->
+            <TextView
+                android:id="@+id/tv_psd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/userPsd"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+            <!-- 请输入密码的布局 -->
+            <EditText
+                android:id="@+id/user_psd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/tv_psd"
+                android:inputType="textPassword"
+                android:padding="5.0dip"
+                android:paddingRight="30dp"
+                android:textColor="#ff3b3b3b"
+                android:textSize="16.0sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/user_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textColor="#ffffff"/>
+
+
+        <!-- 记住密码和修改密码的布局 -->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="10sp">-->
+
+            <!--<CheckBox-->
+                <!--android:id="@+id/login_remember"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:text="@string/rememberPSd"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:checked="false"-->
+                <!--android:textSize="15dp"-->
+                <!--android:textStyle="bold"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/login_modify"-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:text="@string/modifyPsd"-->
+                <!--android:layout_marginRight="40dp"-->
+                <!--android:textSize="15dp"/>-->
+        <!--</LinearLayout>-->
+
+
+
+
+        <!-- 找回密码和立即注册的布局 -->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:padding="10sp">-->
+            <!--&lt;!&ndash; 找回密码 &ndash;&gt;-->
+            <!--<TextView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:text="@string/findPsd"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textStyle="bold"/>-->
+            <!--&lt;!&ndash; 立即注册 &ndash;&gt;-->
+            <!--<TextView-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="56dp"-->
+                <!--android:layout_marginLeft="55dp"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:layout_weight="0.03"-->
+                <!--android:text="@string/register"-->
+                <!--android:textSize="15sp"-->
+                <!--android:textStyle="bold"/>-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/u_title"
+            android:textColor="#eeaaee"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <!-- 姓名 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            android:background="@color/white">
+
+            <!-- 姓名的布局 -->
+            <TextView
+                android:id="@+id/u_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_username"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/u_username_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5.0dip"
+                android:paddingRight="40dp"
+                android:textColor="#ff3b3b3b"
+                android:textSize="16.0sp"/>
+        </LinearLayout>
+
+
+        <!-- 性别 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            android:background="@color/white">
+
+            <!-- 性别的布局 -->
+            <TextView
+                android:id="@+id/u_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_sex"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/u_sex_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5.0dip"
+                android:paddingRight="30dp"
+                android:textColor="#ff3b3b3b"
+                android:textSize="16.0sp"/>
+        </LinearLayout>
+
+
+        <!-- 手机号码 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            android:background="@color/white">
+
+            <!-- 手机号码的布局 -->
+            <TextView
+                android:id="@+id/u_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_phone"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/u_phone_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5.0dip"
+                android:paddingRight="30dp"
+                android:textColor="#ff3b3b3b"
+                android:textSize="16.0sp"/>
+        </LinearLayout>
+
+
+        <!-- 车牌号 -->
+        <LinearLayout
+            android:id="@+id/lyCarId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:padding="10sp"
+            android:background="@color/white">
+
+            <!-- 车牌号的布局 -->
+            <TextView
+                android:id="@+id/u_carId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/u_carId"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/u_carId_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5.0dip"
+                android:paddingRight="30dp"
+                android:textColor="#ff3b3b3b"
+                android:textSize="16.0sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/u_exit"
+            android:layout_below="@+id/lyCarId"
+            android:layout_marginTop="36dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:background="#d95b5b"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </LinearLayout>
+</LinearLayout>

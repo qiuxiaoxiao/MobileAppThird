@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="echarts.min.js"></script>
+
+    <style type="text/css">
+        html {font-size:625%}
+        @media screen and (min-width: 320px) {
+            html {font-size:85.3px;}
+        }
+        @media screen and (min-width: 360px) {
+            html {font-size:96px;}
+        }
+        @media screen and (min-width: 375px) {
+            html {font-size:100px;}
+        }
+        @media screen and (min-width: 384px) {
+            html {font-size:102.4px;}
+        }
+        @media screen and (min-width: 400px) {
+            html {font-size:106.67px;}
+        }
+        @media screen and (min-width: 414px) {
+            html {font-size:110.4px;}
+        }
+        @media screen and (min-width: 424px) {
+            html {font-size:113.07px;}
+        }
+        @media screen and (min-width: 480px) {
+            html {font-size:128px;}
+        }
+        @media screen and (min-width: 540px) {
+            html {font-size:144px;}
+        }
+        @media screen and (min-width: 720px) {
+            html {font-size:192px;}
+        }
+        @media screen and (min-width: 750px) {
+            html {font-size:200px;}
+        }
+        @media screen and (min-width: 1280px) {
+            html {font-size:341.2px;}
+        }
+    </style>
+</head>
+<body>
+<div id="main1" style="width: 3.5rem;height: 2.5rem"></div>
+
+<div id="main2" style="width: 3.5rem;height: 2.5rem"></div>
+<script type="text/javascript">
+
+        //基于准备好的dom，初始化echarts实例
+        var myChart1 = echarts.init(document.getElementById('main1'));
+        //指定图表的配置项和数据
+        var option1 = {
+            title: {
+                text: '每周出车时间'
+            },
+            tooltip: {},
+            legend: {
+                data:['出车时间']
+            },
+            xAxis: {
+                data: ["周一","周二","周三","周四","周五","周六","周日"]
+            },
+            yAxis: {},
+            series: [{
+                name: '出车时间',
+                type: 'bar',
+                data: [14, 7, 12, 7, 6, 7, 5]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart1.setOption(option1);
+
+
+        //基于准备好的dom，初始化echarts实例
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        //指定图表的配置项和数据
+        var option2 = {
+            title: {
+                text: '未来一周气温变化'
+            },
+            tooltip: {
+                trigger: ''
+            },
+            legend: {
+                data:['最高气温','最低气温']
+            },
+            xAxis:  {
+                type: 'category',
+                boundaryGap: false,
+                data: ['周一','周二','周三','周四','周五','周六','周日']
+            },
+            yAxis: {
+                type: 'value',
+                axisLabel: {
+                    formatter: '{value} °C'
+                }
+            },
+            series: [
+                {
+                    name:'最高气温',
+                    type:'line',
+                    data:[21, 21, 25, 23, 22, 13, 18],
+                    markPoint: {
+                        data: [
+                            {type: 'max', name: '最大值'},
+                            {type: 'min', name: '最小值'}
+                        ]
+                    },
+                    markLine: {
+                        data: [
+                            {type: 'average', name: '平均值'}
+                        ]
+                    }
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart2.setOption(option2);
+    </script>
+</body>
+</html>

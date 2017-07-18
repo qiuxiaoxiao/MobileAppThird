@@ -1,0 +1,455 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--TableRow 表示行，每行里面就可以 通过其他View来实现我们想要的方格-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ff000000">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:text="@string/h_title"
+                    android:textColor="#ff000000"
+                    android:textSize="25.0sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <!--TableRow 设备编号-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginTop="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:text="@string/h_ID"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginTop="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:text="2.0"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/device_name"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_marginTop="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:ellipsize="marquee"
+                    android:gravity="center"
+                    android:text="@string/h_ID_unit"
+                    android:textColor="#ff000000" />
+            </TableRow>
+
+            <!--TableRow 纬度-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_latitude"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="30.5170"/>
+
+                <TextView
+                    android:id="@+id/device_Id"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_latLong_unit"/>
+            </TableRow>
+
+            <!--TableRow 经度-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_longitude"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="114.1500"/>
+
+                <TextView
+                    android:id="@+id/launch_nums"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_latLong_unit"/>
+            </TableRow>
+
+            <!--TableRow 压力-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_pressure"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="1.1"/>
+
+                <TextView
+                    android:id="@+id/device_status"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_pressure_unit"/>
+            </TableRow>
+
+            <!--TableRow 温度-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_temperature"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="25"/>
+
+                <TextView
+                    android:id="@+id/shell_nums"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_temperature_unit"/>
+            </TableRow>
+
+            <!--TableRow 湿度-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_moisture"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="28.16"/>
+
+                <TextView
+                    android:id="@+id/storage"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_moisture_unit"/>
+            </TableRow>
+
+            <!--TableRow 行车速度-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_speed"/>
+
+                <TextView
+                    android:id="@+id/speed"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="28.16"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_speed_unit"/>
+            </TableRow>
+
+            <!--TableRow 燃油油位-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_oilPlace"/>
+
+                <TextView
+                    android:id="@+id/moisture"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="1243.30"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_oilPlace_unit"/>
+            </TableRow>
+
+            <!--TableRow 路面温度-->
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff000000" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="@string/h_roadTemperature"/>
+
+                <TextView
+                    android:id="@+id/roadTemperature"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:padding="6.0dip"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:text="28.16"/>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="1.0dip"
+                    android:layout_marginLeft="1.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffffffff"
+                    android:gravity="center"
+                    android:textColor="#ff000000"
+                    android:text="@string/h_roadTemperature_unit"/>
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>
